@@ -1,4 +1,4 @@
-**_Victor Soria-Carrasco, Nicola Nadeau, Alison Wright, Helen Hipperson_**
+**_Victor Soria-Carrasco, Nicola Nadeau, Alison Wright & Helen Hipperson_**
 
 **_Department of Animal and Plant Sciences, University of Sheffield_**
 
