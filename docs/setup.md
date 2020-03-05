@@ -26,7 +26,6 @@ For speed the files have been made temporarily available in the `/fastdata` dire
 ```bash
 rsync -avPh /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/alignments ./
 ```
-If the transfer is too slow, you can cancel it (ctrl+c) and try from a different location in `fastdata`:
 
 It is important to have all the BAM files indexed. To speed things up, we can use an [SGE array job](http://docs.hpc.shef.ac.uk/en/latest/parallel/JobArray.html) to index files in parallel:
 ```bash
