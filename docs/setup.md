@@ -20,7 +20,7 @@ There are many different tools for SNP calling, we are going to use three of the
 ## Data
 We need to copy alignments in BAM format. We are not going to use the same alignments used in the previous sessions, because we need them to contain certain specific information to run some of the exercises for this practical. You can copy them with rsync, which allows resuming in case something goes wrong and the transfer is interrupted:
 ```bash
-rsync -avPh /usr/local/extras/Genomics/workshops/NGS_AdvSta_2019/SNPgenocall/alignments ./
+rsync -avPh /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/alignments ./
 ```
 If the transfer is too slow, you can cancel it (ctrl+c) and try from a different location in `fastdata`:
 ```bash
