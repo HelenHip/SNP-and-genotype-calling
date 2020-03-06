@@ -35,7 +35,7 @@ To make sense of the PCA plots, we will also need the information about the race
 cp /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/sample_race_sex.tsv ./ 
 head sample_race_sex.tsv
 ```
-Then we will use R to do PCA with the mean genotypes, followed by some plotting. For this part, you may want to use a graphical SSH connection (already the default with MobXterm, use the -X flag in Linux and MacOS) and launch an interactive graphical session with `qsh` instead of `qrsh`. This way, you will be able to visualize your plots instead of having to redirect them to files and download them. However, some people find the graphical terminal that is opened when using `qsh` annoying and inestable. In the following steps it is assumed you don't have graphical capabilities and all outputs will be directed to files. The first step is to launch an interactive R session:
+Then we will use R to do PCA with the mean genotypes, followed by some plotting. For this part, you may want to use a graphical SSH connection (already the default with MobXterm, use the -X flag in Linux and MacOS) and launch an interactive graphical session with `qsh` instead of `qrsh`. This way, you will be able to visualize your plots instead of having to redirect them to files and download them. However, some people find the graphical terminal that is opened when using `qsh` annoying and unstable. In the following steps it is assumed you don't have graphical capabilities and all outputs will be directed to files. The first step is to launch an interactive R session:
 ```bash
 R
 ```
