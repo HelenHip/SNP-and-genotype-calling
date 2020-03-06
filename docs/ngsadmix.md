@@ -100,7 +100,7 @@ should show something like:
 
 Now we are going to visualize the admixture estimates using ´R´. We will need some more information about the samples to produce meaningful plots. A file with information about the race and the sex of each sample can be copied from a shared directory on ShARC:
 ```bash
-cp /usr/local/extras/Genomics/workshops/NGS_AdvSta_2019/SNPgenocall/sample_race_sex.tsv ngsadmix/ 
+cp /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/sample_race_sex.tsv ngsadmix/ 
 head ngsadmix/sample_race_sex.tsv
 ```
 Now, let's launch an interactive session of ``R`` and generate some plots for the admixture inferences when K=2. When you launch R:
