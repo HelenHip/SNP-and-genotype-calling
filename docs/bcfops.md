@@ -24,7 +24,9 @@ bcftools view -H -v snps bcftools/bcftools-Hmel201001.bcf | awk '$5 ~ /,/' | les
 bcftools view -H -v snps -m 3 bcftools/bcftools-Hmel201001.bcf | less -S
 ```
 These two commands produce the same information but in two different ways.
+
 ```awk '$5 ~ /,/'``` is returning all lines from the variant file where there is a ```,``` in the 5th column ```$5``` of the bcf file. The 5th column is the one containing the alternative alleles, and if there are two alternative alleles they are separated by a ```,```.
+
 ```-m 3``` is the bcftools command that means "-m, --min-alleles INT: print sites with at least INT alleles listed in REF and ALT columns". So here we are asking for all lines where there at least 3 REF and ALT alleles in total.
 
 ### Extracting information
