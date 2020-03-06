@@ -1,4 +1,4 @@
-## 3. SNP and genotype calling with GATK
+## 4. SNP and genotype calling with GATK
 GATK is another popular alternative. The algorithms used are more complex than those of bcftools, which makes the process of SNP calling slower. You can find how ``HaplotypeCaller`` - the caller we will be using in this practical - works [here](https://software.broadinstitute.org/gatk/documentation/article?id=4148). An advange is the good documentation, with frequently updated guides on *Best Practices*. For example, you can find a document on the [GATK Best Practices for calling variants in RNASeq](https://software.broadinstitute.org/gatk/documentation/article.php?id=3891). However, we are not following all these recommendations here, because of time limitations.  
 
 Before calling SNPs, we have to create the dictionary file for the genome:
