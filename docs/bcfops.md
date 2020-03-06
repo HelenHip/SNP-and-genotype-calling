@@ -1,4 +1,4 @@
-## 4. Operations with BCF files
+## 5. Operations with BCF files
 The next sections exemplify how to do operations with VCF/BCF files, including merging, subsetting and filtering, mostly using bcftools and awk.
 
 ### Samples and SNPs 
