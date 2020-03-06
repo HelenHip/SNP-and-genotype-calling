@@ -54,7 +54,7 @@ qsub indexbam.sh
 ```
 Indexing should be finished in a few minutes and the files should look like this:
 ```bash
-ls -lh alignments | head -n 8
+ls -lh alignments | head -n 9
 ```
 >``total 59G``<br>
 >``-rwx------ 1 myuser cs 1.9G Feb 14 14:46 60A.bam``<br>
