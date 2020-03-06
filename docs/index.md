@@ -12,10 +12,10 @@ Originally written by Victor Soria-Carrasco
 3. [VCF and BCF format](vcfbcf.md)
 4. [SNP and genotype calling with GATK](gatk.md)
 5. [Operations with BCF files](bcfops.md)
+6. Practical application: [Population structure with NGSADMIX](ngsadmix.md)<br>
+7. Practical application: [PCA of genoypes with R](pca.md)<br>
 
 Extras:<br>
-  * [Population structure with NGSADMIX](ngsadmix.md)<br>
-  * [PCA of genoypes with R](pca.md)<br>
   * [SNP and genotype calling with ANGSD](angsd.md)<br>
   * [Genetic architecture of traits with GEMMA](https://visoca.github.io/popgenomworkshop-gwas_gemma/)<br>
   * [Delimitation of contiguous regions of differentiation using Hidden Markov Models](https://visoca.github.io/popgenomworkshop-hmm/)<br>
