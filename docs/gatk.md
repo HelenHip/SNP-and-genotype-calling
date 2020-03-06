@@ -80,7 +80,7 @@ BCF=$OUTDIR/gatk-${REGIONS[$I]}.bcf
 #   * --minimum-mapping-quality 20: filter out alignments with mapping quality <20
 #   * --output-mode EMIT_VARIANTS_ONLY: output only variants
 #   * --dont-use-soft-clipped-bases: avoid using soft-clipped bases for calls
-#   * --native-pair-hmm-threads 4: use 4 threads for the pair-HMM process
+#   * --native-pair-hmm-threads 2: use 2 threads for the pair-HMM process
 
 gatk --java-options "-Xmx4g" \
 HaplotypeCaller \
