@@ -18,7 +18,7 @@ bcftools view -H -v snps bcftools/bcftools-Hmel201001.bcf | wc -l
 # only indels
 bcftools view -H -v indels bcftools/bcftools-Hmel201001.bcf | wc -l
 ```
-Multiallelic SNPs (with >2 alternate alleles) can be extracted with awk or with the `-m` flag:
+Multiallelic SNPs (with >1 alternate alleles) can be extracted with awk or with the `-m` flag:
 ```bash 
 bcftools view -H -v snps bcftools/bcftools-Hmel201001.bcf | awk '$5 ~ /,/' | less -S
 bcftools view -H -v snps -m 3 bcftools/bcftools-Hmel201001.bcf | less -S
