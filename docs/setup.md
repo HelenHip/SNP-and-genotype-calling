@@ -30,7 +30,7 @@ rsync -avPh /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/ali
 It is important to have all the BAM files indexed. To speed things up, we can use an [SGE array job](http://docs.hpc.shef.ac.uk/en/latest/parallel/JobArray.html) to index files in parallel:
 ```bash
 #!/bin/bash
-#$ -l mem=2g
+#$ -l rmem=2g
 #$ -l h_rt=1:00:00
 #$ -t 1-32
 #$ -j y
