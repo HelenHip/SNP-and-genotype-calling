@@ -179,7 +179,7 @@ q()
 And now copy the BCF file and get the mean genotypes:
 ```bash
 # copy data
-cp /usr/local/extras/Genomics/workshops/NGS_AdvSta_2019/SNPgenocall/snps-large.bcf* ./ 
+cp /usr/local/extras/Genomics/workshops/NGS_AdvSta_2020/SNPgenocall/snps-large.bcf* ./ 
 # check number of SNPs
 bcftools view -H snps-large.bcf | wc -l
 # Get mean genotypes
