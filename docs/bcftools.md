@@ -16,7 +16,7 @@ We are going to prepare now a batch script to call SNPs and genotypes for all 32
 ```bash
 #!/bin/bash
 #$ -l h_rt=1:00:00
-#$ -l mem=2G
+#$ -l rmem=2G
 #$ -t 1-3
 #$ -m bea
 #$ -M myemail@mail.com
