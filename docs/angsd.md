@@ -9,7 +9,7 @@ Here you can see a script to call SNPs in a similar fashion to bcftools or GATK,
 ```bash
 #!/bin/bash
 #$ -l h_rt=1:00:00
-#$ -l mem=2G
+#$ -l rmem=2G
 #$ -pe smp 2
 #$ -t 1-3
 #$ -j y
