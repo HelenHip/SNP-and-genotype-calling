@@ -20,7 +20,7 @@ Now, let's prepare a batch script to run GATK on ShARC. As before, we will use a
 ```bash
 #!/bin/bash
 #$ -l h_rt=1:00:00
-#$ -l mem=4G
+#$ -l rmem=4G
 #$ -j y
 #$ -t 1-3
 #$ -pe smp 4
