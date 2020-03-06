@@ -30,7 +30,7 @@ These two commands produce the same information but in two different ways.
 ```-m 3``` is the bcftools command that means "-m, --min-alleles INT: print sites with at least INT alleles listed in REF and ALT columns". So here we are asking for all lines where there at least 3 REF and ALT alleles in total.
 
 ### Extracting information
-Partial information can be extracted using the `bcftools query`. In the example above we saw how to get the list of samples using the `l` option, but it can also be used to extract any fields using the `-f` option. For example, you can simple extract the list of positions with:
+Partial information can be extracted using the `bcftools query`. In the example above we saw how to get the list of samples using the `-l` option, but it can also be used to extract any fields using the `-f` option. For example, you can simple extract the list of positions with:
 ```bash 
 bcftools query -f '%POS\n'  bcftools/bcftools-Hmel201001.bcf | less -S
 ```
