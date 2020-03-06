@@ -15,7 +15,7 @@ This will produce a `.dict` file:
 
 __Important note:__ GATK is more picky than bcftools with regards to the content of the BAM files and requires the [read groups](https://gatkforums.broadinstitute.org/gatk/discussion/6472/read-groups) information to be appropriately encoded. The BAM files that will be used below have been produced to include such information, but it is something to bear in mind if planning to use GATK. In https://github.com/visoca/SNP-and-genotype-calling there are two examples scripts on (1) how to run an aligner such as [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml) to include read groups in the output BAM files ([hisat2.sh](https://github.com/visoca/SNP-and-genotype-calling/blob/master/scripts/hisat2.sh); genome has to be indexed first with `hisat2-build`) and (2) how to run [picard tools](https://broadinstitute.github.io/picard/) to add read groups to the BAM files *a posteriori* ([rgsbams.sh](https://github.com/visoca/SNP-and-genotype-calling/blob/master/scripts/rgsbams.sh)). 
 
-Now, let's prepare a batch script to run GATK on ShARC. As before, we will use an SGE array to call SNPs in parallel for three scaffolds, but this time we will be using 4 cores for each task.
+Now, let's prepare a batch script to run GATK on ShARC. As before, we will use an SGE array to call SNPs in parallel for three scaffolds, but this time we will be using 2 cores for each task.
 
 ```bash
 #!/bin/bash
@@ -23,7 +23,7 @@ Now, let's prepare a batch script to run GATK on ShARC. As before, we will use a
 #$ -l rmem=4G
 #$ -j y
 #$ -t 1-3
-#$ -pe smp 4
+#$ -pe smp 2
 #$ -o gatk.log
 #$ -N gatk
 
@@ -88,7 +88,7 @@ HaplotypeCaller \
 --minimum-mapping-quality 20 \
 --output-mode EMIT_VARIANTS_ONLY \
 --dont-use-soft-clipped-bases \
---native-pair-hmm-threads 4 \
+--native-pair-hmm-threads 2 \
 -R $GENOME \
 $BAMS \
 -L ${REGIONS[$I]} \
@@ -111,7 +111,7 @@ As mentioned before, we are using the tool called [``HaplotypeCaller``](https://
 * `--minimum-mapping-quality 20`: filter out alignments with mapping quality (MQ) <20
 * `--output-mode EMIT_VARIANTS_ONLY`: output only variants
 * `--dont-use-soft-clipped-bases`: avoid using soft-clipped bases to minimize false positive and false negative calls; this is recommended for RNASeq (and it is how bcftools works).
-* --native-pair-hmm-threads 4: use 4 threads to speed up the pair-HMM process
+* --native-pair-hmm-threads 2: use 2 threads to speed up the pair-HMM process
 
 When you have finished editing the bash script, save it as `gatk.sh`, make it executable with `chmod` and submit it to the job queue with `qsub`:
 ```bash
