@@ -182,6 +182,9 @@ Further analysis with K=3:
 # Load admixture proportions
 admix<-t(as.matrix(read.table("ngsadmix/snps_K3.qopt")))
 
+# Load info about samples
+id.info<-read.table("ngsadmix/sample_race_sex.tsv", sep="\t", header=T)
+
 # sort by race and plot
 admix<-admix[,order(id.info$race)]
 id.info<-id.info[order(id.info$race),]
